@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SuperSolo </title>
+    <link rel="icon" type="image/png" href="IMG_0003.jpeg"/>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="google-adsense-account" content="ca-pub-3298943858369433">
+</head>
+<body>
+    <div id="overlay">
+        <div id="enter-text">click me to enter</div>
+    </div>
+<head>
+    <style>
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #enter-text {
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</html>
+
+    </div>
+    <video autoplay muted loop id="bg-video">
+        <source src="190840-888525903.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <div class="profile-box">
+            <div class="profile">
+                <img src="IMG_0003.jpeg" alt="Profile Picture" id="profile-pic">
+                <h1 id="username">SuperSolo</h1>
+            <p id="p1">a moderation and ai chatbot! packed with a leveling system
+            </div>
+            <p id="p1">my projects 
+            <div class="links">
+   <a href="https://discord.com/oauth2/authorize?client_id=1359624072278839469&permissions=8&scope=bot%20applications.commands" class="link">Invite Bot</a>
+   <a href="https://soloo.fun" class="link">Owners Site</a>
+            </div> <br>
+            </div>
+            </div>
+        </div>
+
+        <audio id="bg-music" src="Yeat-bigger-th-n-everything-(JustNaija.com).mp3" loop></audio>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const overlay = document.getElementById('overlay');
+            const content = document.querySelector('.content');
+            const bgMusic = document.getElementById('bg-music');
+            const volumeControl = document.getElementById('volume-control');
+
+            overlay.addEventListener('click', () => {
+                overlay.style.opacity = '0';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                    content.style.display = 'flex';
+                    bgMusic.play();
+                }, 1000);
+            });
+            volumeControl.addEventListener('input', (e) => {
+                bgMusic.volume = e.target.value;
+            });
+        });
+    </script>
+</body>
+
+</html>
